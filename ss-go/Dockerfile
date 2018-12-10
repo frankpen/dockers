@@ -1,3 +1,4 @@
+#2018-12-10 v0.11
 FROM golang:1.10.3-alpine3.8 AS builder
 
 RUN apk upgrade --update \
