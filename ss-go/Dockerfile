@@ -21,6 +21,6 @@ RUN apk upgrade --update \
 
 COPY --from=builder /go/bin/go-shadowsocks2 /usr/bin/ss-go
 ENV ARGS="ss://AES-128-CFB:password@1.2.3.4:10400" 
-EXPOSE 2080/tcp 2080/udp
-CMD /usr/bin/ss-go -c ${ARGS} -verbose -socks :2080
+EXPOSE 4080/tcp 4080/udp
+CMD /usr/bin/ss-go -c ${ARGS} -verbose -socks :4080
 
